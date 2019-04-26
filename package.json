@@ -1,0 +1,16 @@
+{
+  "name": "AttentiRica",
+  "version": "1.0.0",
+  "description": "Hey",
+  "main": "bot.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "DemonGilly",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "ms": "^2.1.1",
+    "ytdl-core": "^0.26.3"
+  }
+}
