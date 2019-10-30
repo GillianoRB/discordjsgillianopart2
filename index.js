@@ -36,13 +36,16 @@ bot.on("ready", () => {
  
     console.log(`${bot.user.username} has started, with ${bot.users.size}  users, in ${bot.channels.size} channels of ${bot.guilds.size} guilds.`); 
  
-    bot.user.setActivity(`My prefix is $`, { type: "PLAYING" });
+    bot.user.setActivity(`My prefix is /`, { type: "PLAYING" });
 	
  
 });
 
 bot.on('guildMemberAdd', member => {
-  member.guild.channels.get('524038952647131146').send('**' + member.user.username + '**, has joined the server!'); 
+  member.guild.channels.get('524038952647131146').send('**' + member.user.username + '**, has joined the server!');
+	
+  var role = member.guild.roles.find('name', 'noob');
+  member.addRole(role);
 });
 
 bot.on('guildMemberRemove', member => {
