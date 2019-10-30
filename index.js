@@ -151,7 +151,7 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     return message.channel.send(botembed)
   };
 
-  if(cmd === `${prefix}report`){
+  if(cmd === `${prefix}warn`){
 
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.got (args[0]));
     if(!rUser) return message.channel.send("Couldn't find user");
@@ -160,10 +160,10 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     if(rUser.hasPermission("ADMINISTRATOR")) return message.channel.send("That Person Cant Be Report Server Owner/ Higher then my role!");
 
     let reportEmbed = new Discord.RichEmbed()
-    .setDescription("Reports")
+    .setDescription("Warned")
     .setColor("$15f153")
-    .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
-    .addField("Reported by", `${message.author} with ID: ${message.author.id}`)
+    .addField("Warned User", `${rUser} with ID: ${rUser.id}`)
+    .addField("warned by", `${message.author} with ID: ${message.author.id}`)
     .addField("Channel", message.channel)
     .addField("Time", message.createdAt)
     .addField("Reason", reason);
@@ -187,7 +187,7 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     .addField("/poll (question)")
     .addField("/ban (user)")
     .addField("/kick")
-    .addField("/dm (user) (message)";
+    .addField("/dm (user) (message)");
 
     message.channel.send(helpmodEmbed);
   };
