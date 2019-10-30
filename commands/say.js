@@ -1,7 +1,7 @@
 module.exports.run = async(bot, message, args) => {
 
     message.delete();
-    if (message.author.id !== '244169411026485259' && message.author.id !== '201060604323168257') return;
+     if(!message.member.hasPermission("ADMINISTRATION")) return message.channel.send("No can do pal!") return;
     let botmessage = args.join(" ");
     message.channel.send(botmessage);
   }
