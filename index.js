@@ -41,7 +41,7 @@ bot.on("ready", () => {
  
 });
 
-bot.on('serverNewMember', function(server, user) {
+bot.on('guildMemberAdd', function(server, user) {
   user.server.channels.get('639205000287092756').send('**' + user.username + '**, has joined the server!');
   user.addTo(server.roles.get("name", "Noob"));
 });
