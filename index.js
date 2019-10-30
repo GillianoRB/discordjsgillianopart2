@@ -78,7 +78,7 @@ bot.on("message", async message => {
   
   
   
-  const swearWords = ["fuck", "Fuck","wtf", "motherfucker", "fucker"];
+  const swearWords = ["fuck", "Fuck","wtf", "motherfucker", "fuckere"];
     if( swearWords.some(word => message.content.includes(word)) ) {
         message.delete();
         message.author.send('Hey! That word has been banned, please don\'t use it!');
