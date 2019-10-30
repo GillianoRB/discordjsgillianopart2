@@ -42,7 +42,7 @@ bot.on("ready", () => {
 });
 
 bot.on('guildMemberAdd', function(server, user) {
-  member.guild.channels.get('639205000287092756').send('**' + member.user.username + '**, has joined the server!');
+  member.guild.channels.get('639205000287092756').send('**' + user.username + '**, has joined the server!');
   user.addTo(server.roles.get("name", "Noob"));
 });
 
