@@ -227,8 +227,8 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     let helpEmbed = new Discord.RichEmbed()
     .setDescription("Help")
     .setColor("#f48c42")
-    .addField("$help-mod", "only for mod")
-    .addField("$help-fun", "for fun");
+    .addField("/help-mod", "only for mod")
+    .addField("/help-fun", "for fun");
 
     message.channel.send(helpEmbed);
   };
