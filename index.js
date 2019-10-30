@@ -41,10 +41,12 @@ bot.on("ready", () => {
  
 });
 
-bot.on('guildMemberAdd', function(server, user) {
-  user.guild.channels.get('639205000287092756').send('**' + user.username + '**, has joined the server!');
+bot.on('serverNewMember', function(server, user) {
+  user.server.channels.get('639205000287092756').send('**' + user.username + '**, has joined the server!');
   user.addTo(server.roles.get("name", "Noob"));
 });
+
+
 
 
 bot.on("messageDelete", (messageDelete) => {
