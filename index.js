@@ -42,15 +42,10 @@ bot.on("ready", () => {
 });
 
 bot.on('guildMemberAdd', member => {
-  member.guild.channels.get('524038952647131146').send('**' + member.user.username + '**, has joined the server!');
+  member.guild.channels.get('639205000287092756').send('**' + member.user.username + '**, has joined the server!');
 	
   var role = member.guild.roles.find('name', 'noob');
   member.addRole(role);
-});
-
-bot.on('guildMemberRemove', member => {
-  member.guild.channels.get('524038952647131146').send('**' + member.user.username + '**, has left the server');
-  //
 });
 
 
