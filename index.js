@@ -190,6 +190,7 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     .addField("/poll (question)")
     .addField("/ban (user)")
     .addField("/kick")
+    .addField("/tempmute (user) (time)")
     .addField("/dm (user) (message)");
 
     message.channel.send(helpmodEmbed);
