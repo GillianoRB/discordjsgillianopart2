@@ -41,7 +41,7 @@ bot.on("ready", () => {
  
 });
 
-bot.on('guildMemberAdd', (guildMember) {
+bot.on('guildMemberAdd', (guildMember) => {
   guildMember.channels.get('639205000287092756').send('**' + user.username + '**, has joined the server!')
   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Noob"));
 });
