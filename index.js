@@ -70,17 +70,7 @@ bot.on("messageDelete", (messageDelete) => {
 bot.on("message", async message => {
 
   if(message.author.bot) return;
-  if(message.channel.type === "dm") {
-    let embed = new Discord.RichEmbed()
-    .setTimestamp()
-    .setTitle("Direct Message To The Bot")
-    .addField(`Sent By:`,`<@${message.author.id}>`)
-    .setColor("RANDOM")
-    .setThumbnail(message.author.displayAvatarURL)
-    .addField(`Message: `,message.content)
-    .setFooter(`DM Bot Messages | DM Logs`)
-   
-    bot.users.get("244169411026485259").send(embed);
+  if(message.channel.type === "dm");
   
   }
   
@@ -97,21 +87,7 @@ bot.on("message", async message => {
 
       
   
-  if (message.content.startsWith("$awesome")) {
-    message.author.send(`FUCK YOU FOR SAYING AWESOME YOU AWESOME BITCH LASAGNA, sub to pewdiepie`)
-    message.delete();
-  };
-	
   
-
-
-  if (message.content.startsWith("hey")) {
-    message.channel.send(`Hey, ${message.author.username}`)
-  }
-
-  if (message.content.startsWith("hello")) {
-    message.channel.send(`Hey, ${message.author.username}`)
-  }
 
   if (message.content.startsWith("hi")) {
     message.channel.send(`Hey, ${message.author.username}`)
@@ -119,169 +95,11 @@ bot.on("message", async message => {
   
   
 
-  if (message.content.startsWith("$math1")) {
-    message.channel.send("10+10=?, 4 options: 20, 30, 0, 4");
-    const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-    console.log(collector)
-    collector.on('collect', message => {
-        if (message.content == "20") {
-            message.channel.send("Good Job");
-        } else if (message.content == "30") {
-            message.channel.send("Well You tried...");
-        } else if (message.content == "0") {
-            message.channel.send("Well You tried...");
-        } else if (message.content == "4") {
-            message.channel.send("Well you tried...")
-        }
-      })
-    };
+  
 
 
+    
 
-    if (message.content.startsWith("$math3")) {
-      message.channel.send("100-10=?, 4 options: 90, 235, 0, 14");
-      const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-      console.log(collector)
-      collector.on('collect', message => {
-          if (message.content == "90") {
-              message.channel.send("Good Job");
-          } else if (message.content == "235") {
-              message.channel.send("Well You tried...");
-          } else if (message.content == "0") {
-              message.channel.send("Well You tried...");
-          } else if (message.content == "14") {
-              message.channel.send("Well you tried...")
-          }
-        })
-      };
-
-      if (message.content.startsWith("$math4")) {
-        message.channel.send("1284uwqsdjahwr8u4214-4218487sa2=?, 4 options: -40, 210, 1, 0");
-        const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-        console.log(collector)
-        collector.on('collect', message => {
-            if (message.content == "-40") {
-                message.channel.send("Good Job");
-            } else if (message.content == "210") {
-                message.channel.send("Well You tried...");
-            } else if (message.content == "1") {
-                message.channel.send("Well You tried...");
-            } else if (message.content == "0") {
-                message.channel.send("Well you tried...")
-            }
-          })
-        };
-	
-
-
-   
-
-        if (message.content.startsWith("$math5")) {
-          message.channel.send("666-666=?, 4 options: 0, -0, 10, 244");
-          const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-          console.log(collector)
-          collector.on('collect', message => {
-              if (message.content == "0") {
-                  message.channel.send("Good Job");
-              } else if (message.content == "-0") {
-                  message.channel.send("Well You tried...");
-              } else if (message.content == "10") {
-                  message.channel.send("Well You tried...");
-              } else if (message.content == "244") {
-                  message.channel.send("Well you tried...")
-              }
-            })
-          };
-
-          if (message.content.startsWith("$math6")) {
-            message.channel.send("X-3=?, 4 options: 7, 10, 50, 42");
-            const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-            console.log(collector)
-            collector.on('collect', message => {
-                if (message.content == "7") {
-                    message.channel.send("Good Job");
-                } else if (message.content == "10") {
-                    message.channel.send("Well You tried...");
-                } else if (message.content == "50") {
-                    message.channel.send("Well You tried...");
-                } else if (message.content == "42") {
-                    message.channel.send("Well you tried...")
-                }
-              })
-            };
-
-            if (message.content.startsWith("$math7")) {
-              message.channel.send("VII-7=?, 4 options: 124, 30512, 0, 42");
-              const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-              console.log(collector)
-              collector.on('collect', message => {
-                  if (message.content == "0") {
-                      message.channel.send("Good Job");
-                  } else if (message.content == "124") {
-                      message.channel.send("Well You tried...");
-                  } else if (message.content == "30512") {
-                      message.channel.send("Well You tried...");
-                  } else if (message.content == "42") {
-                      message.channel.send("Well you tried...")
-                  }
-                })
-              };
-
-              if (message.content.startsWith("$math8")) {
-                message.channel.send("90-10+10-10+50-32=?, 4 options: 130, 230, 5, 412");
-                const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-                console.log(collector)
-                collector.on('collect', message => {
-                    if (message.content == "130")  {
-                        message.channel.send("Good Job");
-                    } else if (message.content == "230") {
-                        message.channel.send("Well You tried...");
-                    } else if (message.content == "5") {
-                        message.channel.send("Well You tried...");
-                    } else if (message.content == "412") {
-                        message.channel.send("Well you tried...")
-                    }
-                  })
-                };
-
-                if (message.content.startsWith("$math9")) {
-                  message.channel.send("X-100=?, 4 options: -90, -30, -0, 124");
-                  const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-                  console.log(collector)
-                  collector.on('collect', message => {
-                      if (message.content == "-90") {
-                          message.channel.send("Good Job");
-                      } else if (message.content == "-30") {
-                          message.channel.send("Well You tried...");
-                      } else if (message.content == "-0") {
-                          message.channel.send("Well You tried...");
-                      } else if (message.content == "124") {
-                          message.channel.send("Well you tried...")
-                      }
-                    })
-                  };
-	   
-	         
-		
-
-              
-
-    if (message.content.startsWith("$math2")) {
-      message.channel.send("1294÷125=?, 4 options: 10.352, 301, 12.354, 205");
-      const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-      console.log(collector)
-      collector.on('collect', message => {
-          if (message.content == "205") {
-              message.channel.send("Well You tried...");
-          } else if (message.content == "301") {
-              message.channel.send("Well You tried...");
-          } else if (message.content == "10.352") {
-              message.channel.send("Great Job");
-          } else if (message.content == "12.352") {
-              message.channel.send("Well you tried...")
-          }
-        })
-      };
 
       
 
@@ -364,12 +182,12 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     let helpmodEmbed = new Discord.RichEmbed()
     .setDescription("Help Mod")
     .setColor("#f48c42")
-    .addField("$report (user) (reason)", "reporting")
-    .addField("$Lockdown (time: s, m, h)")
-    .addField("$poll (question)")
-    .addField("$mute (user)")
-    .addField("$addrole (user) (role name)")
-    .addField("$removerole (user) (role name)");
+    .addField("/report (user) (reason)", "reporting")
+    .addField("/Lockdown (time: s, m, h)")
+    .addField("/poll (question)")
+    .addField("/ban (user)")
+    .addField("/kick")
+    .addField("/dm (user) (message)";
 
     message.channel.send(helpmodEmbed);
   };
@@ -378,20 +196,9 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     let helpmodEmbed = new Discord.RichEmbed()
     .setDescription("Help fun")
     .setColor("#f48c42")
-    .addField("$avatar (user)", "avatar of user")
-    .addField("$rps", "rock paper scissor")
-    .addField("$roast (user)")
-    .addField("$slap (user)", "clap")
-    .addField("$kiss (user)", "kisses user")
-    .addField("$hug (user)", "hugs user")
-    .addField("$coinflip", "flips coin")
-    .addField("$google (something)", "searches at google")
-    .addField("$ratewaifu (user)", "rates user ")
-    .addField("$info (user)", "gives user info")
-    .addField("$dadjoke")
-    .addField("$8ball (question)")
-    .addField("$bingo")
-    .addField("$serverinfo", "gives guild info");
+    .addField("/avatar (user)", "avatar of user")
+    .addField("/info (user)", "gives user info")
+    .addField("/serverinfo", "gives guild info");
 
     message.channel.send(helpmodEmbed);
   };
@@ -411,30 +218,14 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
  };
 
 
-  if(cmd === `${prefix}help-math`){
-    let helpmodEmbed = new Discord.RichEmbed()
-    .setDescription("Help math")
-    .setColor("#f48c42")
-    .addField("$math1", "math 1 = easy")
-    .addField("$math2", "math 2 = medium")
-    .addField("$math3", "math 3 = hard")
-    .addField("$math4", "math 4 = very hard")
-    .addField("$math5", "math 5 = most hard")
-    .addField("$math6", "math 6 = good luck about this 1")
-    .addField("$math7", "math 7 = well gg ")
-    .addField("$math8", "math 8 = ULTRA HARD")
-    .addField("$math9", "math 9 = medium hard");
-
-    message.channel.send(helpmodEmbed);
-  };
+  
 
   if(cmd === `${prefix}help`){
     let helpEmbed = new Discord.RichEmbed()
     .setDescription("Help")
     .setColor("#f48c42")
     .addField("$help-mod", "only for mod")
-    .addField("$help-fun", "for fun")
-    .addField("$help-math", "for maths");
+    .addField("$help-fun", "for fun");
 
     message.channel.send(helpEmbed);
   };
@@ -444,7 +235,7 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
   
   
 
-  if(cmd === `${prefix}clear`){
+  if(cmd === `${prefix}purge`){
   
     if(!message.member.hasPermission("ADMINISTRATOR")) return errors.noPerms(message, "ADMINISTRATOR");
     if(!args[0]) return message.channel.send("oof");
