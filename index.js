@@ -72,7 +72,7 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm");
   
-  }
+  
   
   
   const swearWords = ["fuck", "Fuck","wtf", "motherfucker", "fucker"];
