@@ -18,7 +18,7 @@ errorEmbed = new discord.RichEmbed() //Embed als er geen reden is binnenhalen
 
 if(!onderwerp) return message.channel.send(errorEmbed); //als er geen args zijn
 
-let role = message.guild.roles.find(c => c.name ==='support'); //De role die toegang heeft tot de channel
+let role = message.guild.roles.find(c => c.name ==='Support 🎉'); //De role die toegang heeft tot de channel
 let role2 = message.guild.roles.find(c => c.name ==='@everyone'); //De role van iedereen
       // Als ticket al gemaakt is
       var bool = false;
@@ -45,7 +45,7 @@ let role2 = message.guild.roles.find(c => c.name ==='@everyone'); //De role van 
     if (bool == true) return;
 
 
-    if (!role) return message.channel.send("Please create a role called **support** to use tickets. ") //Als support rank er niet is
+    if (!role) return message.channel.send("Please create a role called **Support 🎉** to use tickets. ") //Als support rank er niet is
 message.guild.createChannel("🎫ticket-" + userName, "text").then(c => {//Wat permissies voor de rolls
     c.overwritePermissions(role, {
         SEND_MESSAGES: true,
