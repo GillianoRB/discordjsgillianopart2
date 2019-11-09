@@ -72,7 +72,7 @@ bot.on("message", async message => {
   
   
   
-  const swearWords = ["Chillergilly", "ChillerGilly", "Gilly", "Chiller", "chiller", "gilly"];
+  const swearWords = ["sdhgbssd"];
     if( swearWords.some(word => message.content.includes(word)) ) {
         message.delete();
         message.author.send('Hey! That word has been banned, please don\'t use it!');
