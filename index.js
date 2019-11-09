@@ -160,7 +160,7 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     return message.channel.send(botembed)
   };
 	
-  if(cmd === '/ann') {
+  if(cmd === `${prefix}ann`) {
     if (!message.author.id === "536702810759233557") return message.channel.send("No can do pal!");
     let channel = message.mentions.channels();
     let announcement = args.slice(1).join(" ");
@@ -225,7 +225,7 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
   if(cmd === `${prefix}dm`){
     let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
     if (!dUser) return message.channel.send("Can't find user!")
-    if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You can't you that command!")
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You can't you that command!")
     let dMessage = args.join(" ").slice(22);
     if(dMessage.length < 1) return message.reply('You must supply a message!')
 
