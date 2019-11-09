@@ -243,7 +243,7 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
 
   if(cmd === `${prefix}purge`){
   
-    if(!message.member.hasPermission("ADMINISTRATOR")) return errors.noPerms(message, "ADMINISTRATOR");
+    if(!message.member.hasPermission("MANAGE_MESAGE")) return errors.noPerms(message, "MANAGE_MESAGE");
     if(!args[0]) return message.channel.send("oof");
     message.channel.bulkDelete(args[0]).then(() => {
     message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
