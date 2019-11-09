@@ -187,12 +187,13 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     let helpmodEmbed = new Discord.RichEmbed()
     .setDescription("Help Mod")
     .setColor("#f48c42")
-    .addField("/report (user) (reason)", "reporting")
+    .addField("/warn (user) (reason)", "warning")
     .addField("/Lockdown (time: s, m, h)")
     .addField("/poll (question)")
     .addField("/ban (user)")
     .addField("/kick")
     .addField("/tempmute (user) (time)")
+    .addField("/purge (100 messages max)")
     .addField("/dm (user) (message)");
 
     message.channel.send(helpmodEmbed);
@@ -202,7 +203,6 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     let helpmodEmbed = new Discord.RichEmbed()
     .setDescription("Help fun")
     .setColor("#f48c42")
-    .addField("/avatar (user)", "avatar of user")
     .addField("/info (user)", "gives user info")
     .addField("/serverinfo", "gives guild info");
 
