@@ -148,7 +148,7 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     return message.channel.send(botembed)
   };
 	
-  if(command === '/ann') {
+  if(cmd === '/ann') {
     if (!message.author.id === "536702810759233557") return message.channel.send("No can do pal!");
     let channel = message.mentions.channels();
     let announcement = args.slice(1).join(" ");
