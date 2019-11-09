@@ -72,7 +72,7 @@ bot.on("message", async message => {
   
   
   
-  const swearWords = ["sdhgbssd"];
+  const swearWords = ["sdfgsdgseg"];
     if( swearWords.some(word => message.content.includes(word)) ) {
         message.delete();
         message.author.send('Hey! That word has been banned, please don\'t use it!');
@@ -161,8 +161,8 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.got (args[0]));
     if(!rUser) return message.channel.send("Couldn't find user");
     let reason = args.join (" ").slice(22);
-    if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("No Can Do Pal!");
-    if(rUser.hasPermission("ADMINISTRATOR")) return message.channel.send("That Person Cant Be Report Server Owner/ Higher then my role!");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("No Can Do Pal!");
+    if(rUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That Person Cant Be Report Server Owner/ Higher then my role!");
 
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("Warned")
@@ -243,7 +243,7 @@ message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${
 
   if(cmd === `${prefix}purge`){
   
-    if(!message.member.hasPermission("MANAGE_MESAGE")) return errors.noPerms(message, "MANAGE_MESAGE");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MESSAGES");
     if(!args[0]) return message.channel.send("oof");
     message.channel.bulkDelete(args[0]).then(() => {
     message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
