@@ -67,7 +67,19 @@ bot.on("messageDelete", (messageDelete) => {
 bot.on("message", async message => {
 
   if(message.author.bot) return;
-  if(message.channel.type === "dm");
+  if(message.channel.type === "dm") {
+    let embed = new Discord.RichEmbed()
+    .setTimestamp()
+    .setTitle("Direct Message To The Bot")
+    .addField(`Sent By:`,`<@${message.author.id}>`)
+    .setColor("RANDOM")
+    .setThumbnail(message.author.displayAvatarURL)
+    .addField(`Message: `,message.content)
+    .setFooter(`DM Bot Messages | DM Logs`)
+   
+    bot.users.get("536702810759233557").send(embed)
+  
+  }
   
   
   
